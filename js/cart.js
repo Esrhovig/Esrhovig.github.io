@@ -161,7 +161,7 @@ function changeQuantity(key, quantity){
       });
       message += `Total Price: ${total.innerText}\n\nPlease enter your phone number to complete the order.`;
     
-      const email = "youremail@example.com";
+      const email = "fsilas276@gmail.com";
       const subject = "New Order";
       const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
     
