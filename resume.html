@@ -1,3 +1,8 @@
+It seems like you have nested the `<body>` tag inside the `<section class="bg">`. This nesting structure is incorrect and could be causing the footer not to display properly. Additionally, you have used the `<body>` tag twice in your HTML, which is not valid HTML syntax.
+
+To fix the issue and ensure that the footer displays correctly, you should remove the second `<body>` tag and ensure that the footer is outside of any other container elements. Here's the corrected HTML code:
+
+```html
 <!DOCTYPE html>
 <html lang='en'>
   <head>
@@ -23,10 +28,10 @@
     <script src="/script/menu.js"></script>
   </head>
   <body>
-  <section class="bg">
-    <div class="headache-bg"> 
-      <!-- <video src="/images/bgBlue.mp4" autoplay muted loop></video> -->
-    </div>
+    <section class="bg">
+      <div class="headache-bg"> 
+        <!-- <video src="/images/bgBlue.mp4" autoplay muted loop></video> -->
+      </div>
       <div id="mobile-links">
         <div class="mobile-links-container">
           <ul>
@@ -36,23 +41,24 @@
           </ul>
         </div>
       </div>
-    <header>
-      <div class="header-flex">
-      <a href="/index.html" title="Homepage"><div class="logo"></div></a>
-      <nav>
-        <ul class="linksB">
-          <li><a href="/resume.html" title="Resume">Resume</a></li>
-          <li><a href="/portfolio.html" title="Portfolio">Portfolio</a></li>
-          <li><a href="/downloads.html" title="Download free stuff">Downloads</a></li>
-        </ul>
-      <div class="bars" onclick="mobileMenu()">
-        <i class="fas fa-bars"></i>
-      </div>
-      </nav>
-      </div>
-    </header>
+      <header>
+        <div class="header-flex">
+          <a href="/index.html" title="Homepage"><div class="logo"></div></a>
+          <nav>
+            <ul class="linksB">
+              <li><a href="/resume.html" title="Resume">Resume</a></li>
+              <li><a href="/portfolio.html" title="Portfolio">Portfolio</a></li>
+              <li><a href="/downloads.html" title="Download free stuff">Downloads</a></li>
+            </ul>
+            <div class="bars" onclick="mobileMenu()">
+              <i class="fas fa-bars"></i>
+            </div>
+          </nav>
+        </div>
+      </header>
+    </section>
 
-      <footer>
+    <footer>
       <nav> <!--Secondary Site navigation-->
         <a href='/terms.html'>Terms & Privacy</a>
         <a href='/contact.html'>Contact</a>
@@ -60,13 +66,16 @@
         <a href='/library.html'>My Library</a>
       </nav>
       <h4>Social Links</h4>
-         <a href='https://github.com/elichapo' title='github/makccr' target='_blank'><i class='fab fa-github'></i></a>
-         <a href='https://reddit.com/user/' title='reddit/mack_criswell' target='_blank'><i class='fab fa-reddit-alien'></i></a>
-         <a href='https://twitter.com/eli_chapo5' title='twitter/makccr' target='_blank'><i class='fab fa-twitter'></i></a>
-        <a href='' title='twitter/makccr' target='_blank'><i class='fab fa-medium'></i></a>
+      <a href='https://github.com/elichapo' title='github/makccr' target='_blank'><i class='fab fa-github'></i></a>
+      <a href='https://reddit.com/user/' title='reddit/mack_criswell' target='_blank'><i class='fab fa-reddit-alien'></i></a>
+      <a href='https://twitter.com/eli_chapo5' title='twitter/makccr' target='_blank'><i class='fab fa-twitter'></i></a>
+      <a href='' title='twitter/makccr' target='_blank'><i class='fab fa-medium'></i></a>
       <div class="social">
-        
       </div>
       <p>Copyright© Elijah Udom <br>All Rights Reserved.</p>
     </footer>
+  </body>
 </html>
+```
+
+In this corrected version, the footer is placed outside the `<section class="bg">` and the `<body>` tag is used only once. This should resolve the issue with the footer not displaying properly.
