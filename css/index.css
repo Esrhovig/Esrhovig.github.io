@@ -60,6 +60,17 @@ a { /* Social Links */
   overflow: hidden;
   background: var(--bg-color) url(/images/index_bg.jpg) no-repeat center center/cover;
 }
+
+.headache-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black; /* Set background color to black */
+}
+
 .motion-bg video {
   min-width: 100%;
   min-height: 100%;
