@@ -1,101 +1,107 @@
 <!DOCTYPE html>
-<html lang='en'>
-    <head>
-        <!-- Base Info -->
-        <meta charset='utf-8'/> <!--Setting document to UTF-8-->
-        <meta content='width-device-width, initial-scale=1.0' name='viewport'/>
-        <meta name='keywords' content='style,html,css,page,headers'/> <!--Setting basic description & info-->
-        <!-- <meta name='description' content='Welcome to my website. Here you can download free stuff, look at my portfolio, buy merch, and more!'/> -->
-        <meta name='author' content='Mack'/>
-        <meta name='robots' content='index, follow'/>
-        <meta name="google-site-verification" content="zI4ReyW17rDregFpRqXQeuboyq1lW2IK5WiADOPwbJU" />
-        <title>Contact Me</title>
-        <!-- Favicons -->
-        <link href='/images/favicons/favicon.ico' rel='icon' type='image/ico'/>
-        <link href='/images/favicons/favicon.png' rel='icon' type='image/png'/>
-        <link href='/images/favicons/apple-touch-icon.png' rel='apple-touch-icon'/>
-        <link href='/images/favicons/ios-ipad-144x144.png' sizes='144x144' rel='apple-touch-icon-precomposed'/>
-        <link href='/images/favicons/ios-iphone-114x144.png' sizes='114x114' rel='apple-touch-icon-precomposed'/>
-        <link href='/images/favicons/ios-default-homescreen-57x57.png' sizes='57x57' rel='apple-touch-icon-precomposed'/>
-        <!-- Imports -->
-        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' integrity='sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf' crossorigin='anonymous'/>
-        <link href='/css/style.css' rel='stylesheet'/>
-        <script src="/script/menu.js"></script>
-    </head>
-          <div id="mobile-links">
-        <div class="mobile-links-container">
-          <ul>
-            <!-- <li class="mobile"><a href="https://www.youtube.com/channel/UCWh6YtclgTAzReTASc4uSKw/" target="_blank" title="My YouTube Channel">Videos</a></li><br> -->
-            <li class="mobile"><a href="/resume.html" title="My Work Experience">Resume</a></li><br>  
-            <li class="mobile"><a href="/portfolio.html" title="My Motion Graphics Work">Portfolio</a></li><br>
-            <li class="mobile"><a href="/downloads.html" title="Download free stuff">Downloads</a></li><br>
-            <!-- <li class="mobile"><a href="/merch.html" title="Check out My Merch">Merch</a></li><br> -->
-            <!-- <li class="mobile"><a href="https://makccr.medium.com" target="_blank" title="My Medium Blog">Blog</a></li><br> -->
-          </ul>
+<section class="contact">
+        <div class="container">
+          <h2 class="h2" id="contact">Send Message</h2>
+          <div class="contact-content">
+            <div class="contact-textbox">
+              <!-- Please comment this component if you're not available for hire -->
+              <strong href="#" class="hire-alert">
+                <span class="indicator"></span>
+                Available for hire
+              </strong>
+              <p class="contact-text">
+                As a software engineer, I construct web interfaces and design
+                systems with a special love for accessibility and the
+                performance. I tend to code things from scratch and enjoy
+                bringing ideas to life.
+              </p>
+              <p class="contact-text">
+                I'm also an open-source developer, and in my spare time, I do
+                digital art with my iPad Pro.
+              </p>
+              <!-- Replace src with your signatures and name -->
+              <img
+                src="assets/images/signatures.png"
+                alt="Syed Mohsin"
+                class="signatures"
+                loading="lazy"
+              />
+            </div>
+            <form action="#" class="contact-form" netlify>
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  inputmode="email"
+                />
+              </div>
+              <div class="form-field">
+                <label for="message">How can I help you?</label>
+                <textarea name="message" id="message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-cta">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Update href and src attributes -->
+          <nav>
+            <ol class="footer-links">
+              <li class="footer-link">
+                <a title="GitHub" href="https://github.com/devsyedmohsin" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/github.svg"
+                    alt="GitHub"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Codepen" href="https://github.com/devsyedmohsin" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/codepen.svg"
+                    alt="Codepen"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Linkedin" href="https://www.linkedin.com/in/syed-mohisn-raza-393177262/" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/linkedin.svg"
+                    alt="Linkedin"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a title="Twitter" href="https://github.com/devsyedmohsin" target="_blank" rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/twitter.svg"
+                    alt="Twitter"
+                /></a>
+              </li>
+            </ol>
+          </nav>
+          <p class="footer-text">
+            &copy; <span>2024</span> - Template designed & developed by <a target="_blank" rel="noopener" href="https://github.com/devsyedmohsin">Syed Mohsin.</a>
+          </p>
+          <label class="theme-switch" for="theme-switch">
+            <span>Dark Theme</span>
+            <input type="checkbox" id="theme-switch" role="switch"/>
+          </label>
         </div>
       </div>
-    <header>
-      <div class="header-flex">
-      <a href="/index.html" title="Homepage"><div class="logo"></div></a>
-      <nav>
-        <ul class="linksB">
-          <!-- <li><a href="https://www.youtube.com/channel/UCWh6YtclgTAzReTASc4uSKw/" target="_blank" title="My YouTube Channel">Videos</a></li> -->
-          <li><a href="/resume.html" title="My Work Experience">Resume</a></li>  
-          <li><a href="/portfolio.html" title="My Motion Graphics Work">Portfolio</a></li>
-          <li><a href="/downloads.html" title="Download free stuff">Downloads</a></li>
-          <!-- <li><a href="/merch.html">Merch</a></li> -->
-          <!-- <li><a href="https://makccr.medium.com" target="_blank" title="My Medium Blog">Blog</a></li> -->
-        </ul>
-      <div class="bars" onclick="mobileMenu()">
-        <i class="fas fa-bars"></i>
-      </div>
-      </nav>
-      </div>
-    </header>
-    <body>
-      <h1>Contact</h1>
-      <div class="contact-container">
-        <div class="contact">
-          <h4><i class="fas fa-phone"></i></h4>
-          <h5><a href="tel:+2349046810587">904.681.0587</a></h5>
-        </div>
-        <div class="contact">
-          <h4><i class="fas fa-envelope"></i></h4>
-          <h5><a href='mailto:udomelijah@protonmail.com' title='Send me an email'>udomelijah@protonmail.com</a></h5>
-        </div>
-        <div class="contact">
-          <h4><i class="fas fa-map-marker-alt"></i></h4>
-          <h5><a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Lagos, Nigeria</a></h5>
-        </div>
-      </div>
-
-          
-
-            <h3>Some notes</h3>
-            <br>
-            <p class='headText'>
-            If you need to contact me, the best way is to send me an email. You can also reach out via Twitter or Reddit, which I check regularly. I've included a phone number below for voice-mail and SMS; feel free to use it, but don't expect a live answer. <br><br>
-            For bug reports, please send an email with "Bug Report" as the subject. If you're having issues with my dot files, scripts, or anything from my GitHub page, it's best to open an issue on GitHub so others can benefit from the solution as well. Thanks! </br></br>
-            </p>
-
-
-
-    </body>
-
-    <footer>
-      <nav> <!--Secondary Site navigation-->
-        <a href='/terms.html'>Terms & Privacy</a>
-        <a href='/contact.html'>Contact</a>
-        <a href='/bar.html'>My Bar</a>
-        <a href='/library.html'>My Library</a>
-      </nav>
-      <h4>Social Links</h4>
-      <div class="social">
-        <a href='https://github.com/elichapo' title='github/makccr' target='_blank'><i class='fab fa-github'></i></a>
-        <a href='https://reddit.com/user/' title='reddit/mack_criswell' target='_blank'><i class='fab fa-reddit-alien'></i></a>
-        <a href='https://twitter.com/eli_chapo5' title='twitter/makccr' target='_blank'><i class='fab fa-twitter'></i></a>
-        <a href='' title='twitter/makccr' target='_blank'><i class='fab fa-medium'></i></a>
-      </div>
-      <p>Copyright© Elijah Udom <br>All Rights Reserved.</p>
     </footer>
+  </body>
 </html>
