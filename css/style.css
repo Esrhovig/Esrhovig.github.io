@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;600&display=swap');
 
 :root { /* Base Settings */
-  --fg-color: #000000;
-  --fg2-color: #000000;
+  --fg-color: #f9f9f7;
+  --fg2-color: ##f9f9f7;
   --link-color: #dc3232;
   --link-hover: #dc3232;
   --bg-color: #000;
