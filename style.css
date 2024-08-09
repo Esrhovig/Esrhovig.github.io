@@ -265,6 +265,8 @@ h3,
   border-radius: var(--gutter-nano);
   transition: 0.3s all ease-in-out;
   cursor: pointer;
+  color: var(--bg-color-primary);
+  background-color: var(--important);
 }
 
 @media (max-width: 700px) {
@@ -523,6 +525,7 @@ body.light .header {
 .header-btns {
   display: inline-flex;
   gap: var(--gutter-x-small);
+  justify-content: center;
 }
 
 @media (max-width: 400px) {
