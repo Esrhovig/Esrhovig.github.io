@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="keywords" content="DevOps,Solutions Architect,Linux,RHEL,AWS,Cloud Infrastructure,System Administration,Anime,Manhwa,Reading">
     <meta name="description" content="DevOps Solutions Architect | Linux & AWS Expert | Anime & Manhwa Enthusiast">
-    <meta name="author" content="Eli">
+    <meta name="author" content="Elijah Udom">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="zI4ReyW17rDregFpRqXQeuboyq1lW2IK5WiADOPwbJU">
     
@@ -17,18 +17,28 @@
     <link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png">
     
     <!-- External Resources -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
-          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="/css/index.css">
+    
+    <!-- Performance Optimization -->
+    <link rel="preload" href="/images/bgBlue.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="/images/index_bg.jpg" as="image" type="image/jpeg">
     
     <!-- Scripts -->
     <script src="/script/menu.js" defer></script>
 </head>
 <body>
+    <!-- Dedsec-Themed Loading Screen -->
+    <div id="dedsec-loader" class="dedsec-loader">
+        <div class="dedsec-terminal">
+            <div class="dedsec-text">DEDSEC SYSTEM INITIALIZING</div>
+            <div class="dedsec-progress"></div>
+        </div>
+    </div>
+
     <main class="bg">
         <div class="motion-bg">
-            <video src="/images/bgBlue.mp4" autoplay muted loop aria-hidden="true"></video>
+            <video src="/images/bgBlue.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
         </div>
 
         <nav id="mobile-links" aria-label="Mobile Navigation">
@@ -83,11 +93,24 @@
                 <span class="sr-only">Anime Profile</span>
             </a>
             <a href="https://x.com/elijahu_" title="Elijah U." target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              <i class="fab fa-x-twitter" aria-hidden="true"></i>
               <span class="sr-only">X</span>
            </a>
         </footer>
     </main>
+
+    <script>
+        // Dedsec Loader Script
+        document.addEventListener('DOMContentLoaded', () => {
+            const loader = document.getElementById('dedsec-loader');
+            const video = document.querySelector('.motion-bg video');
+
+            // Simulate loading progress
+            setTimeout(() => {
+                loader.classList.add('loaded');
+                video.play();
+            }, 3000);
+        });
+    </script>
 </body>
 </html>
-
