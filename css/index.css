@@ -1,16 +1,19 @@
+/* Global Styles */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
-:root { /* Base Settings */
+:root {
+  /* Base Settings */
   --fg-color: #fff;
   --bg-color: #000;
   --button-color: #080808;
-} /* Defining color scheme */
+}
 
+/* Reset Styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-} /* Base Settings */
+}
 
 /* Preloader Styles */
 #preloader {
@@ -24,16 +27,52 @@
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  transition: opacity 0.3s ease; /* Faster transition */
+  transition: opacity 0.5s ease;
 }
 
 .loader {
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #3498db;
+  width: 80px;
+  height: 80px;
+  border: 4px solid transparent;
+  border-top: 4px solid #0f0;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
+  animation: spin 2s linear infinite, glitch 1.5s infinite;
+}
+
+/* Glitch animation to mimic the "hacked" look */
+@keyframes glitch {
+  0% {
+    transform: scale(1) translateX(0);
+    opacity: 1;
+  }
+  10% {
+    transform: scale(1.1) translateX(-2px);
+    opacity: 0.8;
+  }
+  20% {
+    transform: scale(1.1) translateX(2px);
+    opacity: 0.7;
+  }
+  30% {
+    transform: scale(1.05) translateX(0);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(1) translateX(-1px);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.1) translateX(1px);
+    opacity: 0.8;
+  }
+  60% {
+    transform: scale(1) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes spin {
@@ -41,35 +80,54 @@
   100% { transform: rotate(360deg); }
 }
 
+/* Preloader Text */
+#preloader-text {
+  color: #0f0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  animation: flicker 1.5s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Body and Content Styles */
 .bg video {
   opacity: 0;
-  transition: opacity 0.5s ease; /* Reduced transition time */
-  visibility: hidden; /* Initially hide video */
+  transition: opacity 1s ease;
 }
 
 .loaded .bg video {
   opacity: 1;
-  visibility: visible; /* Show video when fully loaded */
 }
 
 .loaded #preloader {
   opacity: 0;
   visibility: hidden;
-} /* Preloader Styles */
+}
 
-body { /* Header Text */
+/* Main Page Content Styles */
+body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.2;
   color: var(--fg-color);
   background-color: var(--bg-color);
 }
 
-.content {z-index: 5;}
+.content {
+  z-index: 5;
+}
 
 h1 {
   font-weight: 300;
   font-size: 4rem;
-  margin-bottom: 1rem;  
+  margin-bottom: 1rem;
 }
 
 h3 {
@@ -88,26 +146,27 @@ h3 {
   justify-content: center;
   text-align: center;
   padding: 0 1rem;
-  overflow: hidden;
-} /* Header Text */
+}
 
-a { /* Social Links */
+/* Navigation and Header Styles */
+a {
   text-decoration: none;
   color: var(--fg-color);
   transition: 0.3s;
 }
 
-a:hover { opacity: 0.8; }
+a:hover {
+  opacity: 0.8;
+}
 
 .social {
   color: var(--fg-color);
   font-size: 1.7rem;
   position: absolute;
   bottom: 2rem;
-} /* Social Links */
+}
 
-/* Improved Video BG */
-.motion-bg { 
+.motion-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -124,10 +183,9 @@ a:hover { opacity: 0.8; }
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: black; /* Set background color to black */
+  background: black;
 }
 
-/* Ensure video only loads when needed (lazy loading) */
 .motion-bg video {
   min-width: 100%;
   min-height: 100%;
@@ -136,137 +194,58 @@ a:hover { opacity: 0.8; }
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  visibility: hidden; /* Hide until it loads */
-}
-
-.motion-bg.lazy-load video {
-  visibility: visible; /* Only make video visible once it's loaded */
 }
 
 .motion-bg:after {
-  content:'';
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,.3);
-} /* Video BG */
-
-/* Navigation */
-header { 
-  display: block;
-  position: fixed; 
-  width: 100%;
-  top: 1.5rem;
-  z-index: 10;
 }
 
-.header-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between ;
-  margin-right: 7rem;
-  margin-left: 7rem;
-  margin-top: 1rem;
-}
-
-li {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: var(--fg-color);
-  text-transform: uppercase;
-  font-size: .9rem;
-  list-style-type: none;
-  display: inline-block;
-  padding: .3rem;
-} /* Navigation */
-
-.logo {
-  background: url(/images/mWhite.svg);
-  width: 3rem;
-  height: 3rem;
-  transition: all .3s;
-  margin-left: 3rem;
-  margin-right: 3rem;
-}
-
-.logo:hover {opacity: .8;}
-
-.bars { /* Mobile Navigation */
-  display: none;
-  position: absolute;
-  top: .5rem; 
-  right: 1.5rem;
-  z-index: 35;
-} 
-
-.fa-bars {
-  font-size: 2rem;
-  opacity: .8;
-}
-
-#mobile-links {
-  display: none;
-  position: fixed;
-  text-align: right;
-  background-color: rgba(0,0,0,1.0);
-  width: 100vw; 
-  height: 100vh; 
-  z-index: 10;
-}
-
-.mobile-links-container {
-  margin-top: 7rem; 
-  margin-right: 2rem;
-}
-
-.mobile {
-  font-size: 2rem;
-  line-height: 2;
-}
-
-button {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  color: var(--fg-color);
-  background-color: var(--button-color);
-  border: 0px;
-  border-radius: 1rem;
-  padding: 1rem 2rem; 
-  cursor: pointer;
-  margin-top: 1.5rem;
-  mix-blend-mode: multiply;
-}
-
-/* Mobile Settings ---------------------------------------------------------- */
+/* Mobile Settings */
 @media only screen and (max-width: 850px) {
   .motion-bg video {
     display: none;
   }
 
-  h3 { /* Font adjustments */
+  h3 {
     font-size: 1rem;
     padding-left: 5%;
     padding-right: 5%;
-  } 
+  }
+
   h1 {
     font-size: 3em;
   }
 
-  .bars {display: block;}
-  .linksA, .linksB {display: none;}
-  .logo { margin: 0; }
-  .header-flex { margin: 0rem 1.5rem; }
-} /* Intermediate downscaling cleanup */
+  .bars {
+    display: block;
+  }
+
+  .linksA,
+  .linksB {
+    display: none;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .header-flex {
+    margin: 0rem 1.5rem;
+  }
+}
 
 @media only screen and (max-width: 640px) {
-  h3 { /* Font adjustments */
+  h3 {
     padding-left: 2%;
     padding-right: 2%;
   }
 
-  /* Motion BG to still image */
   .motion-bg {
     background: var(--bg-color) url(/images/index_bg_phone.jpg) no-repeat center center/cover;
   }
@@ -278,5 +257,43 @@ button {
   .motion-bg:after {
     background: rgba(0,0,0,0.5);
   }
-} /* Main phone settings */
+}
+  </style>
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+    <div id="preloader-text">Initializing Connection...</div>
+  </div>
 
+  <!-- Background and Video Content -->
+  <div class="bg loaded">
+    <div class="motion-bg">
+      <video autoplay muted loop>
+        <source src="/path-to-your-video.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Your main content goes here -->
+    <div class="content">
+      <h1>Welcome to DedSec</h1>
+      <h3>Your secure digital world</h3>
+      <div class="social">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Simulate video load completion and remove preloader
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.body.classList.add('loaded');
+      }, 2000); // Adjust timing based on how long you want the preloader to show
+    });
+  </script>
+</body>
+</html>
