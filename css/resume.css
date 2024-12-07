@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+/* Color Scheme */
+:root {
+  --text-color: #ffffff;
+  --bg-color: #000000;
+  --button-bg: #ffffff;
+  --button-text: #000000;
+  --button-hover-bg: #cccccc;
+  --description-color: #d3d3d3;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  margin: 0;
+}
+
+/* Container Styling */
+.resume-container {
+  max-width: 600px;
+  padding: 20px;
+}
+
+/* Heading Styling */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+/* Description Styling */
+.description {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: var(--description-color);
+}
+
+/* Buttons Section */
+.resume-buttons {
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 12px 25px;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: var(--button-hover-bg);
+  transform: scale(1.05);
+}
