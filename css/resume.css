@@ -77,3 +77,38 @@ h1 {
 .bold-text {
     font-weight: 800; /* Extra bold for emphasis */
   }
+
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1f1f1f;
+    color: #f1f1f1;
+    font-size: 14px;
+  }
+  
+  footer nav a {
+    margin: 0 10px;
+    color: #f1f1f1;
+    text-decoration: none;
+  }
+  
+  footer nav a:hover {
+    color: #ff6f61;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
+    color: #f1f1f1;
+    font-size: 18px;
+  }
+  
+  .social-links a:hover {
+    color: #ff6f61;
+  }
+  
+  p {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #c1c1c1;
+  }
+  
