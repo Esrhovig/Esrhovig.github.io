@@ -73,3 +73,7 @@ h1 {
   background-color: var(--button-hover-bg);
   transform: scale(1.05);
 }
+
+.bold-text {
+    font-weight: 800; /* Extra bold for emphasis */
+  }
