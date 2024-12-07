@@ -78,25 +78,25 @@ h1 {
     font-weight: 800; /* Extra bold for emphasis */
   }
 
-  footer {
+footer {
     text-align: center;
     padding: 15px;
     background-color: #1f1f1f;
     color: #f1f1f1;
     font-size: 14px;
-  }
+}
   
-  footer nav a {
+footer nav a {
     margin: 0 10px;
     color: #f1f1f1;
     text-decoration: none;
-  }
+}
   
-  footer nav a:hover {
+footer nav a:hover {
     color: #ff6f61;
-  }
+}
   
-  .social-links a {
+.social-links a {
     margin: 0 10px;
     color: #f1f1f1;
     font-size: 18px;
@@ -104,11 +104,11 @@ h1 {
   
   .social-links a:hover {
     color: #ff6f61;
-  }
+}
   
-  p {
+p {
     margin-top: 15px;
     font-size: 12px;
     color: #c1c1c1;
-  }
+}
   
