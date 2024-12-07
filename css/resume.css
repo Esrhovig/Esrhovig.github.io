@@ -27,6 +27,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
+  justify-content: center;
 }
 
 /* Container Styling */
@@ -34,8 +35,12 @@ body {
   max-width: 600px;
   width: 100%;
   padding: 20px;
-  flex-grow: 1;
   margin: 0 auto;
+}
+
+/* Header Styling */
+header {
+  margin-top: 20vh; /* Brings content down */
   text-align: left;
 }
 
@@ -45,7 +50,6 @@ h1 {
   font-weight: 600;
   margin-bottom: 20px;
   line-height: 1.3;
-  text-align: left;
 }
 
 /* Description Styling */
@@ -53,7 +57,6 @@ h1 {
   font-size: 1.1rem;
   margin-bottom: 30px;
   color: var(--description-color);
-  text-align: left;
 }
 
 /* Buttons Section */
@@ -132,4 +135,19 @@ footer p {
   margin-top: 10px;
   font-size: 12px;
   color: #c1c1c1;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  header {
+    margin-top: 10vh; /* Less vertical space on smaller screens */
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+  }
 }
